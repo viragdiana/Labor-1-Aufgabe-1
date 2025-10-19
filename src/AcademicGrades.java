@@ -27,4 +27,13 @@ public class AcademicGrades {
             }
         return failing;
     }
+    public static double averageGrades(int[] grades){
+        validateGrades(grades);
+        int sum = 0;
+        for(int grade: grades){
+            sum += grade;
+        }
+        double avg = (double) sum / grades.length;
+        return avg;
+    }
 }
