@@ -9,4 +9,22 @@ public class AcademicGrades {
             }
         }
     }
+    public static int[] failingGrades(int[] grades){
+        validateGrades(grades);
+        int count = 0;
+        for (int grade : grades) {
+            if (grade < 40) {
+                count++;
+            }
+        }
+            int[] failing = new int[count];
+            int idx = 0;
+            for(int grade: grades){
+                if(grade < 40){
+                    failing[idx] = grade;
+                    idx++;
+                }
+            }
+        return failing;
+    }
 }
