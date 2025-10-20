@@ -7,6 +7,9 @@ public class Main {
         double avg = AcademicGrades.averageGrades(grades);
         System.out.println(Arrays.toString(failing));
         System.out.println(String.format("%.2f", avg));
+        int[] rounded = AcademicGrades.roundedGrades(grades);
+        System.out.println(Arrays.toString(rounded));
+        System.out.println(AcademicGrades.maxroundedGrade(grades));
 
     }
 }

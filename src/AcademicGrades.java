@@ -36,4 +36,37 @@ public class AcademicGrades {
         double avg = (double) sum / grades.length;
         return avg;
     }
-}
+    public static int[] roundedGrades(int[] grades) {
+        validateGrades(grades);
+        int[] rounded = new int[grades.length];
+        int i = 0;
+        for (int grade : grades) {
+            if (grade < 38) {
+                rounded[i] = grade;
+            } else {
+                int remainder = grade % 5;
+                int difference = 5 - remainder;
+                if (difference < 3) {
+                    rounded[i] = grade + difference;
+                } else {
+                    rounded[i] = grade;
+                }
+            }
+            i++;
+        }
+        return rounded;
+    }
+    public static int maxroundedGrade(int[] grades){
+        validateGrades(grades);
+        int[] rounded = roundedGrades(grades);
+        int max = rounded[0];
+        for (int grade : rounded){
+            if (grade > max) {
+                max = grade;
+            }
+        }
+        return max;
+
+    }
+    }
+
