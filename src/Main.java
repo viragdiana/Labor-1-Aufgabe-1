@@ -10,7 +10,6 @@ public class Main {
         int[] rounded = AcademicGrades.roundedGrades(grades);
         System.out.println(Arrays.toString(rounded));
         System.out.println(AcademicGrades.maxroundedGrade(grades));
-        System.out.println(AcademicGrades.maxroundedGrade(grades));
 
     }
 }
